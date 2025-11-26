@@ -1,0 +1,82 @@
+/* Neo-Brutalism Variables */
+:root {
+    --bg-color: #f0f0f0;
+    --card-bg: #ffffff;
+    --text-color: #000000;
+    --accent-1: #ff6b6b; /* Red */
+    --accent-2: #4ecdc4; /* Teal */
+    --accent-3: #ffe66d; /* Yellow */
+    --accent-4: #1a535c; /* Dark Blue */
+    --border-width: 4px;
+    --shadow-offset: 6px;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: 'Courier New', Courier, monospace; /* Monospace for raw feel */
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Headers */
+h1, h2, h3 {
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: -1px;
+    margin-bottom: 20px;
+    border: var(--border-width) solid black;
+    padding: 10px;
+    background-color: var(--accent-3);
+    box-shadow: var(--shadow-offset) var(--shadow-offset) 0px 0px black;
+    display: inline-block;
+}
+
+/* Cards */
+.nb-card {
+    background-color: var(--card-bg);
+    border: var(--border-width) solid black;
+    box-shadow: var(--shadow-offset) var(--shadow-offset) 0px 0px black;
+    padding: 20px;
+    margin-bottom: 30px;
+    transition: transform 0.1s ease;
+}
+
+.nb-card:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: calc(var(--shadow-offset) + 2px) calc(var(--shadow-offset) + 2px) 0px 0px black;
+}
+
+/* Buttons (if any) */
+.nb-button {
+    background-color: var(--accent-2);
+    border: var(--border-width) solid black;
+    color: black;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 4px 4px 0px 0px black;
+}
+
+.nb-button:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px 0px black;
+}
+
+/* Grid Layout */
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+@media (max-width: 768px) {
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+}
