@@ -1,3 +1,6 @@
+"""
+DO NOT USE THIS YOU WILL GET BANNED. For pedagogical purposes only
+"""
 import pyautogui
 import time
 import signal
